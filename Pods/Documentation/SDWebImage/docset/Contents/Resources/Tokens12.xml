@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SDWebImageManagerDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SDWebImageManagerDelegate</TokenIdentifier>
+			<Abstract type="html">Delegate protocol for SDWebImageManager</Abstract>
+			<DeclaredIn>SDWebImageManagerDelegate.h</DeclaredIn>
+			
+			<NodeRef refid="12"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageManagerDelegate/webImageManager:didProgressWithPartialImage:forURL:userInfo:</TokenIdentifier>
+			<Abstract type="html">Called while an image is downloading with an partial image object representing the currently downloaded portion of the image.
+This delegate is called only if ImageIO is available and SDWebImageProgressiveDownload option has been used.</Abstract>
+			<DeclaredIn>SDWebImageManagerDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)webImageManager:(SDWebImageManager *)imageManager didProgressWithPartialImage:(UIImage *)image forURL:(NSURL *)url userInfo:(NSDictionary *)info</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>imageManager</Name>
+					<Abstract type="html">The image manager</Abstract>
+				</Parameter><Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The retrived image object</Abstract>
+				</Parameter><Parameter>
+					<Name>url</Name>
+					<Abstract type="html">The image URL used to retrive the image</Abstract>
+				</Parameter><Parameter>
+					<Name>info</Name>
+					<Abstract type="html">The user info dictionnary</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/webImageManager:didProgressWithPartialImage:forURL:userInfo:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageManagerDelegate/webImageManager:didProgressWithPartialImage:forURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SDWebImageManagerDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)webImageManager:(SDWebImageManager *)imageManager didProgressWithPartialImage:(UIImage *)image forURL:(NSURL *)url</Declaration>
+			
+			
+			<Anchor>//api/name/webImageManager:didProgressWithPartialImage:forURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageManagerDelegate/webImageManager:didFinishWithImage:forURL:userInfo:</TokenIdentifier>
+			<Abstract type="html">Called when image download is completed successfuly.</Abstract>
+			<DeclaredIn>SDWebImageManagerDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)webImageManager:(SDWebImageManager *)imageManager didFinishWithImage:(UIImage *)image forURL:(NSURL *)url userInfo:(NSDictionary *)info</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>imageManager</Name>
+					<Abstract type="html">The image manager</Abstract>
+				</Parameter><Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The retrived image object</Abstract>
+				</Parameter><Parameter>
+					<Name>url</Name>
+					<Abstract type="html">The image URL used to retrive the image</Abstract>
+				</Parameter><Parameter>
+					<Name>info</Name>
+					<Abstract type="html">The user info dictionnary</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/webImageManager:didFinishWithImage:forURL:userInfo:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageManagerDelegate/webImageManager:didFinishWithImage:forURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SDWebImageManagerDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)webImageManager:(SDWebImageManager *)imageManager didFinishWithImage:(UIImage *)image forURL:(NSURL *)url</Declaration>
+			
+			
+			<Anchor>//api/name/webImageManager:didFinishWithImage:forURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageManagerDelegate/webImageManager:didFinishWithImage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SDWebImageManagerDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)webImageManager:(SDWebImageManager *)imageManager didFinishWithImage:(UIImage *)image</Declaration>
+			
+			
+			<Anchor>//api/name/webImageManager:didFinishWithImage:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageManagerDelegate/webImageManager:didFailWithError:forURL:userInfo:</TokenIdentifier>
+			<Abstract type="html">Called when an error occurred.</Abstract>
+			<DeclaredIn>SDWebImageManagerDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)webImageManager:(SDWebImageManager *)imageManager didFailWithError:(NSError *)error forURL:(NSURL *)url userInfo:(NSDictionary *)info</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>imageManager</Name>
+					<Abstract type="html">The image manager</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error</Abstract>
+				</Parameter><Parameter>
+					<Name>url</Name>
+					<Abstract type="html">The image URL used to retrive the image</Abstract>
+				</Parameter><Parameter>
+					<Name>info</Name>
+					<Abstract type="html">The user info dictionnary</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/webImageManager:didFailWithError:forURL:userInfo:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageManagerDelegate/webImageManager:didFailWithError:forURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SDWebImageManagerDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)webImageManager:(SDWebImageManager *)imageManager didFailWithError:(NSError *)error forURL:(NSURL *)url</Declaration>
+			
+			
+			<Anchor>//api/name/webImageManager:didFailWithError:forURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageManagerDelegate/webImageManager:didFailWithError:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SDWebImageManagerDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)webImageManager:(SDWebImageManager *)imageManager didFailWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/webImageManager:didFailWithError:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

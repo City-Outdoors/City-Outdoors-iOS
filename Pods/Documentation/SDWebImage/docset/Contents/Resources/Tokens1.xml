@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SDImageCache.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SDImageCache</TokenIdentifier>
+			<Abstract type="html">SDImageCache maintains a memory cache and an optional disk cache. Disk cache write operations are performed
+asynchronous so it doesn’t add unnecessary latency to the UI.</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SDImageCache/sharedImageCache</TokenIdentifier>
+			<Abstract type="html">Returns global shared cache instance</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>+ (SDImageCache *)sharedImageCache</Declaration>
+			
+			<ReturnValue><Abstract type="html">SDImageCache global instance</Abstract></ReturnValue>
+			<Anchor>//api/name/sharedImageCache</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SDImageCache/setMaxCacheAge:</TokenIdentifier>
+			<Abstract type="html">Sets the global maximum cache age</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setMaxCacheAge:(NSInteger)maxCacheAge</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>maxCacheAge</Name>
+					<Abstract type="html">The maximum length of time to keep an image in the cache, in seconds</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setMaxCacheAge:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/storeImage:forKey:</TokenIdentifier>
+			<Abstract type="html">Store an image into memory and disk cache at the given key.</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)storeImage:(UIImage *)image forKey:(NSString *)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The image to store</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The unique image cache key, usually it&apos;s image absolute URL</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/storeImage:forKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/storeImage:forKey:toDisk:</TokenIdentifier>
+			<Abstract type="html">Store an image into memory and optionally disk cache at the given key.</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)storeImage:(UIImage *)image forKey:(NSString *)key toDisk:(BOOL)toDisk</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The image to store</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The unique image cache key, usually it&apos;s image absolute URL</Abstract>
+				</Parameter><Parameter>
+					<Name>toDisk</Name>
+					<Abstract type="html">Store the image to disk cache if YES</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/storeImage:forKey:toDisk:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/storeImage:imageData:forKey:toDisk:</TokenIdentifier>
+			<Abstract type="html">Store an image into memory and optionally disk cache at the given key.</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)storeImage:(UIImage *)image imageData:(NSData *)data forKey:(NSString *)key toDisk:(BOOL)toDisk</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The image to store</Abstract>
+				</Parameter><Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The image data as returned by the server, this representation will be used for disk storage
+instead of converting the given image object into a storable/compressed image format in order
+to save quality and CPU</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The unique image cache key, usually it&apos;s image absolute URL</Abstract>
+				</Parameter><Parameter>
+					<Name>toDisk</Name>
+					<Abstract type="html">Store the image to disk cache if YES</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/storeImage:imageData:forKey:toDisk:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/imageFromKey:</TokenIdentifier>
+			<Abstract type="html">Query the memory cache for an image at a given key and fallback to disk cache
+synchronousely if not found in memory.</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (UIImage *)imageFromKey:(NSString *)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The unique key used to store the wanted image</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/imageFromKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/imageFromKey:fromDisk:</TokenIdentifier>
+			<Abstract type="html">Query the memory cache for an image at a given key and optionnaly fallback to disk cache
+synchronousely if not found in memory.</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (UIImage *)imageFromKey:(NSString *)key fromDisk:(BOOL)fromDisk</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The unique key used to store the wanted image</Abstract>
+				</Parameter><Parameter>
+					<Name>fromDisk</Name>
+					<Abstract type="html">Try to retrive the image from disk if not found in memory if YES</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/imageFromKey:fromDisk:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/queryDiskCacheForKey:delegate:userInfo:</TokenIdentifier>
+			<Abstract type="html">Query the disk cache asynchronousely.</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)queryDiskCacheForKey:(NSString *)key delegate:(id&lt;SDImageCacheDelegate&gt;)delegate userInfo:(NSDictionary *)info</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The unique key used to store the wanted image</Abstract>
+				</Parameter><Parameter>
+					<Name>delegate</Name>
+					<Abstract type="html">The delegate object to send response to</Abstract>
+				</Parameter><Parameter>
+					<Name>info</Name>
+					<Abstract type="html">An NSDictionary with some user info sent back to the delegate</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/queryDiskCacheForKey:delegate:userInfo:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/removeImageForKey:</TokenIdentifier>
+			<Abstract type="html">Remove the image from memory and disk cache synchronousely</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeImageForKey:(NSString *)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The unique image cache key</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeImageForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/removeImageForKey:fromDisk:</TokenIdentifier>
+			<Abstract type="html">Remove the image from memory and optionaly disk cache synchronousely</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeImageForKey:(NSString *)key fromDisk:(BOOL)fromDisk</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The unique image cache key</Abstract>
+				</Parameter><Parameter>
+					<Name>fromDisk</Name>
+					<Abstract type="html">Also remove cache entry from disk if YES</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeImageForKey:fromDisk:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/clearMemory</TokenIdentifier>
+			<Abstract type="html">Clear all memory cached images</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)clearMemory</Declaration>
+			
+			
+			<Anchor>//api/name/clearMemory</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/clearDisk</TokenIdentifier>
+			<Abstract type="html">Clear all disk cached images</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)clearDisk</Declaration>
+			
+			
+			<Anchor>//api/name/clearDisk</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/cleanDisk</TokenIdentifier>
+			<Abstract type="html">Remove all expired cached image from disk</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)cleanDisk</Declaration>
+			
+			
+			<Anchor>//api/name/cleanDisk</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/getSize</TokenIdentifier>
+			<Abstract type="html">Get the size used by the disk cache</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (int)getSize</Declaration>
+			
+			
+			<Anchor>//api/name/getSize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/getDiskCount</TokenIdentifier>
+			<Abstract type="html">Get the number of images in the disk cache</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (int)getDiskCount</Declaration>
+			
+			
+			<Anchor>//api/name/getDiskCount</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/getMemorySize</TokenIdentifier>
+			<Abstract type="html">Get the total size of images in memory cache</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (int)getMemorySize</Declaration>
+			
+			
+			<Anchor>//api/name/getMemorySize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDImageCache/getMemoryCount</TokenIdentifier>
+			<Abstract type="html">Get the number of images in the memory cache</Abstract>
+			<DeclaredIn>SDImageCache.h</DeclaredIn>			
+			
+			<Declaration>- (int)getMemoryCount</Declaration>
+			
+			
+			<Anchor>//api/name/getMemoryCount</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

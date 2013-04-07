@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/MWPhoto.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/MWPhoto</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhotoProtocol.h</DeclaredIn>
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MWPhoto/underlyingImage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhotoProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (UIImage *)underlyingImage</Declaration>
+			
+			
+			<Anchor>//api/name/underlyingImage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MWPhoto/loadUnderlyingImageAndNotify</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhotoProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadUnderlyingImageAndNotify</Declaration>
+			
+			
+			<Anchor>//api/name/loadUnderlyingImageAndNotify</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MWPhoto/unloadUnderlyingImage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhotoProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (void)unloadUnderlyingImage</Declaration>
+			
+			
+			<Anchor>//api/name/unloadUnderlyingImage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MWPhoto/caption</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhotoProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)caption</Declaration>
+			
+			
+			<Anchor>//api/name/caption</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

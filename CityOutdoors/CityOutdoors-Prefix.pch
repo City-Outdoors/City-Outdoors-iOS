@@ -1,0 +1,24 @@
+//
+// Prefix header for all source files of the 'CityOutdoors' target in the 'CityOutdoors' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+	#import <UIKit/UIKit.h>
+	#import <Foundation/Foundation.h>
+	#import <SystemConfiguration/SystemConfiguration.h>
+	#import <MobileCoreServices/MobileCoreServices.h>
+#endif
+
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#   define DAssert(cond,desc) NSAssert(cond,desc);
+#else
+#   define DLog(...)
+#   define DAssert(...)
+#endif

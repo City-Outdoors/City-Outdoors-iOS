@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SDImageCacheDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SDImageCacheDelegate</TokenIdentifier>
+			<Abstract type="html">Delegate protocol for SDImageCache</Abstract>
+			<DeclaredIn>SDImageCacheDelegate.h</DeclaredIn>
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDImageCacheDelegate/imageCache:didFindImage:forKey:userInfo:</TokenIdentifier>
+			<Abstract type="html">Called when [SDImageCache queryDiskCacheForKey:delegate:userInfo:] retrived the image from cache</Abstract>
+			<DeclaredIn>SDImageCacheDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)imageCache:(SDImageCache *)imageCache didFindImage:(UIImage *)image forKey:(NSString *)key userInfo:(NSDictionary *)info</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>imageCache</Name>
+					<Abstract type="html">The cache store instance</Abstract>
+				</Parameter><Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The requested image instance</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The requested image cache key</Abstract>
+				</Parameter><Parameter>
+					<Name>info</Name>
+					<Abstract type="html">The provided user info dictionary</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/imageCache:didFindImage:forKey:userInfo:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDImageCacheDelegate/imageCache:didNotFindImageForKey:userInfo:</TokenIdentifier>
+			<Abstract type="html">Called when [SDImageCache queryDiskCacheForKey:delegate:userInfo:] did not find the image in the cache</Abstract>
+			<DeclaredIn>SDImageCacheDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)imageCache:(SDImageCache *)imageCache didNotFindImageForKey:(NSString *)key userInfo:(NSDictionary *)info</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>imageCache</Name>
+					<Abstract type="html">The cache store instance</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The requested image cache key</Abstract>
+				</Parameter><Parameter>
+					<Name>info</Name>
+					<Abstract type="html">The provided user info dictionary</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/imageCache:didNotFindImageForKey:userInfo:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

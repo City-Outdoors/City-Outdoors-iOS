@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SDWebImageDownloaderDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SDWebImageDownloaderDelegate</TokenIdentifier>
+			<Abstract type="html">Delegate protocol for SDWebImageDownloader</Abstract>
+			<DeclaredIn>SDWebImageDownloaderDelegate.h</DeclaredIn>
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageDownloaderDelegate/imageDownloaderDidFinish:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SDWebImageDownloaderDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)imageDownloaderDidFinish:(SDWebImageDownloader *)downloader</Declaration>
+			
+			
+			<Anchor>//api/name/imageDownloaderDidFinish:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageDownloaderDelegate/imageDownloader:didUpdatePartialImage:</TokenIdentifier>
+			<Abstract type="html">Called repeatedly while the image is downloading when [SDWebImageDownloader progressive] is enabled.</Abstract>
+			<DeclaredIn>SDWebImageDownloaderDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)imageDownloader:(SDWebImageDownloader *)downloader didUpdatePartialImage:(UIImage *)image</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>downloader</Name>
+					<Abstract type="html">The SDWebImageDownloader instance</Abstract>
+				</Parameter><Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The partial image representing the currently download portion of the image</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/imageDownloader:didUpdatePartialImage:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageDownloaderDelegate/imageDownloader:didFinishWithImage:</TokenIdentifier>
+			<Abstract type="html">Called when download completed successfuly.</Abstract>
+			<DeclaredIn>SDWebImageDownloaderDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)imageDownloader:(SDWebImageDownloader *)downloader didFinishWithImage:(UIImage *)image</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>downloader</Name>
+					<Abstract type="html">The SDWebImageDownloader instance</Abstract>
+				</Parameter><Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The downloaded image object</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/imageDownloader:didFinishWithImage:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageDownloaderDelegate/imageDownloader:didFailWithError:</TokenIdentifier>
+			<Abstract type="html">Called when an error occurred</Abstract>
+			<DeclaredIn>SDWebImageDownloaderDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)imageDownloader:(SDWebImageDownloader *)downloader didFailWithError:(NSError *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>downloader</Name>
+					<Abstract type="html">The SDWebImageDownloader instance</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error details</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/imageDownloader:didFailWithError:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

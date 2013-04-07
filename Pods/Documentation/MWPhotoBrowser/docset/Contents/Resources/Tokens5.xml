@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MWTapDetectingView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MWTapDetectingView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingView.h</DeclaredIn>
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWTapDetectingView/setTapDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;MWTapDetectingViewDelegate&gt; tapDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/tapDelegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MWTapDetectingView/tapDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;MWTapDetectingViewDelegate&gt; tapDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/tapDelegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWTapDetectingView/handleSingleTap:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingView.h</DeclaredIn>			
+			
+			<Declaration>- (void)handleSingleTap:(UITouch *)touch</Declaration>
+			
+			
+			<Anchor>//api/name/handleSingleTap:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWTapDetectingView/handleDoubleTap:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingView.h</DeclaredIn>			
+			
+			<Declaration>- (void)handleDoubleTap:(UITouch *)touch</Declaration>
+			
+			
+			<Anchor>//api/name/handleDoubleTap:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWTapDetectingView/handleTripleTap:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingView.h</DeclaredIn>			
+			
+			<Declaration>- (void)handleTripleTap:(UITouch *)touch</Declaration>
+			
+			
+			<Anchor>//api/name/handleTripleTap:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

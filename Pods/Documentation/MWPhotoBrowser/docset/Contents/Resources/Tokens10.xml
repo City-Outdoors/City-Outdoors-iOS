@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/MWTapDetectingViewDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/MWTapDetectingViewDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingView.h</DeclaredIn>
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MWTapDetectingViewDelegate/view:singleTapDetected:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingView.h</DeclaredIn>			
+			
+			<Declaration>- (void)view:(UIView *)view singleTapDetected:(UITouch *)touch</Declaration>
+			
+			
+			<Anchor>//api/name/view:singleTapDetected:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MWTapDetectingViewDelegate/view:doubleTapDetected:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingView.h</DeclaredIn>			
+			
+			<Declaration>- (void)view:(UIView *)view doubleTapDetected:(UITouch *)touch</Declaration>
+			
+			
+			<Anchor>//api/name/view:doubleTapDetected:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MWTapDetectingViewDelegate/view:tripleTapDetected:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingView.h</DeclaredIn>			
+			
+			<Declaration>- (void)view:(UIView *)view tripleTapDetected:(UITouch *)touch</Declaration>
+			
+			
+			<Anchor>//api/name/view:tripleTapDetected:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

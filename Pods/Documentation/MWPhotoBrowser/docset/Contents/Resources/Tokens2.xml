@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MWPhoto.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MWPhoto</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhoto.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWPhoto/setCaption:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhoto.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *caption</Declaration>
+			
+			
+			<Anchor>//api/name/caption</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MWPhoto/caption</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhoto.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *caption</Declaration>
+			
+			
+			<Anchor>//api/name/caption</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MWPhoto/photoWithImage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhoto.h</DeclaredIn>			
+			
+			<Declaration>+ (MWPhoto *)photoWithImage:(UIImage *)image</Declaration>
+			
+			
+			<Anchor>//api/name/photoWithImage:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MWPhoto/photoWithFilePath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhoto.h</DeclaredIn>			
+			
+			<Declaration>+ (MWPhoto *)photoWithFilePath:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/photoWithFilePath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MWPhoto/photoWithURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhoto.h</DeclaredIn>			
+			
+			<Declaration>+ (MWPhoto *)photoWithURL:(NSURL *)url</Declaration>
+			
+			
+			<Anchor>//api/name/photoWithURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWPhoto/initWithImage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhoto.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithImage:(UIImage *)image</Declaration>
+			
+			
+			<Anchor>//api/name/initWithImage:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWPhoto/initWithFilePath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhoto.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithFilePath:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/initWithFilePath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWPhoto/initWithURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhoto.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithURL:(NSURL *)url</Declaration>
+			
+			
+			<Anchor>//api/name/initWithURL:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

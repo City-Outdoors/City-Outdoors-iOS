@@ -7,10 +7,13 @@ City Outdoors iOS requires iOS 5 and above.
 
 This project uses [Cocoapods](http://cocoapods.org) to keep track of 3rd party dependencies and [mogenerator](http://rentzsch.github.com/mogenerator) to generate the Core Data models.
 
-While installing cocoapods isn't required the project contains a build script that assumes that mogenerator is installed.
+While installing Cocoapods isn't required the project contains a build script that assumes that mogenerator is installed.
 
 To install mogenerator using [homebrew](http://mxcl.github.com/homebrew) :
+
 `brew install mogenerator`
+
+You will also have to make sure that you use `CityOutdoors.xcworkspace` and NOT `CityOutdoors.xcodeproj`.
 
 ## Credits
 

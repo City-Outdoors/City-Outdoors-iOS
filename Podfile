@@ -1,0 +1,15 @@
+platform :ios , '5.0'
+xcodeproj 'CityOutdoors.xcodeproj'
+
+pod 'JASidePanels'
+pod 'AFNetworking'
+pod 'MBProgressHUD'
+pod 'RaptureXML'
+pod 'SSKeychain'
+pod 'BSModalPickerView'
+pod 'SDWebImage/MapKit','<3.0.0'
+pod 'MWPhotoBrowser'
+pod 'UIImage-Resize'
+pod 'ShareKit/Facebook'
+pod 'ShareKit/Twitter'
+

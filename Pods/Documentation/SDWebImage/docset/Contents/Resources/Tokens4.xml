@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SDWebImageManager.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SDWebImageManager</TokenIdentifier>
+			<Abstract type="html">The SDWebImageManager is the class behind the UIImageView+WebCache category and likes.
+It ties the asynchronous downloader (SDWebImageDownloader with the image cache store (SDImageCache.
+You can use this class directly to benefit from web image downloading with caching in another context than
+a UIView.</Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/setCacheKeyFilter:</TokenIdentifier>
+			<Abstract type="html">The cache filter is a block used each time SDWebManager need to convert an URL into a cache key. This can
+be used to remove dynamic part of an image URL.</Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>			
+			
+			<Declaration>@property (strong) CacheKeyFilter cacheKeyFilter</Declaration>
+			
+			
+			<Anchor>//api/name/cacheKeyFilter</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SDWebImageManager/cacheKeyFilter</TokenIdentifier>
+			<Abstract type="html">The cache filter is a block used each time SDWebManager need to convert an URL into a cache key. This can
+be used to remove dynamic part of an image URL.</Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>			
+			
+			<Declaration>@property (strong) CacheKeyFilter cacheKeyFilter</Declaration>
+			
+			
+			<Anchor>//api/name/cacheKeyFilter</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SDWebImageManager/sharedManager</TokenIdentifier>
+			<Abstract type="html">Returns global SDWebImageManager instance.</Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>			
+			
+			<Declaration>+ (id)sharedManager</Declaration>
+			
+			<ReturnValue><Abstract type="html">SDWebImageManager shared instance</Abstract></ReturnValue>
+			<Anchor>//api/name/sharedManager</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/imageWithURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>			
+			
+			<Declaration>- (UIImage *)imageWithURL:(NSURL *)url</Declaration>
+			
+			
+			<Anchor>//api/name/imageWithURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:</TokenIdentifier>
+			<Abstract type="html">Downloads the image at the given URL if not present in cache or return the cached version otherwise.</Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:options:userInfo:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:options:userInfo:success:failure:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)downloadWithURL:(NSURL *)url delegate:(id&lt;SDWebImageManagerDelegate&gt;)delegate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>url</Name>
+					<Abstract type="html">The URL to the image</Abstract>
+				</Parameter><Parameter>
+					<Name>delegate</Name>
+					<Abstract type="html">The delegate object used to send result back</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/downloadWithURL:delegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:options:</TokenIdentifier>
+			<Abstract type="html">Downloads the image at the given URL if not present in cache or return the cached version otherwise.</Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:options:userInfo:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:options:userInfo:success:failure:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)downloadWithURL:(NSURL *)url delegate:(id&lt;SDWebImageManagerDelegate&gt;)delegate options:(SDWebImageOptions)options</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>url</Name>
+					<Abstract type="html">The URL to the image</Abstract>
+				</Parameter><Parameter>
+					<Name>delegate</Name>
+					<Abstract type="html">The delegate object used to send result back</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">A mask to specify options to use for this request</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/downloadWithURL:delegate:options:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:options:userInfo:</TokenIdentifier>
+			<Abstract type="html">Downloads the image at the given URL if not present in cache or return the cached version otherwise.</Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:options:success:failure:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)downloadWithURL:(NSURL *)url delegate:(id&lt;SDWebImageManagerDelegate&gt;)delegate options:(SDWebImageOptions)options userInfo:(NSDictionary *)info</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>url</Name>
+					<Abstract type="html">The URL to the image</Abstract>
+				</Parameter><Parameter>
+					<Name>delegate</Name>
+					<Abstract type="html">The delegate object used to send result back</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">A mask to specify options to use for this request</Abstract>
+				</Parameter><Parameter>
+					<Name>info</Name>
+					<Abstract type="html">An NSDictionnary passed back to delegate if provided</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/downloadWithURL:delegate:options:userInfo:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:retryFailed:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)downloadWithURL:(NSURL *)url delegate:(id&lt;SDWebImageManagerDelegate&gt;)delegate retryFailed:(BOOL)retryFailed</Declaration>
+			
+			
+			<Anchor>//api/name/downloadWithURL:delegate:retryFailed:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:retryFailed:lowPriority:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)downloadWithURL:(NSURL *)url delegate:(id&lt;SDWebImageManagerDelegate&gt;)delegate retryFailed:(BOOL)retryFailed lowPriority:(BOOL)lowPriority</Declaration>
+			
+			
+			<Anchor>//api/name/downloadWithURL:delegate:retryFailed:lowPriority:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:options:success:failure:</TokenIdentifier>
+			<Abstract type="html">Downloads the image at the given URL if not present in cache or return the cached version otherwise.</Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:options:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)downloadWithURL:(NSURL *)url delegate:(id)delegate options:(SDWebImageOptions)options success:(SDWebImageSuccessBlock)success failure:(SDWebImageFailureBlock)failure</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>url</Name>
+					<Abstract type="html">The URL to the image</Abstract>
+				</Parameter><Parameter>
+					<Name>delegate</Name>
+					<Abstract type="html">The delegate object used to send result back</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">A mask to specify options to use for this request</Abstract>
+				</Parameter><Parameter>
+					<Name>success</Name>
+					<Abstract type="html">A block called when image has been retrived successfuly</Abstract>
+				</Parameter><Parameter>
+					<Name>failure</Name>
+					<Abstract type="html">A block called when couldn&apos;t be retrived for some reason</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/downloadWithURL:delegate:options:success:failure:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:options:userInfo:success:failure:</TokenIdentifier>
+			<Abstract type="html">Downloads the image at the given URL if not present in cache or return the cached version otherwise.</Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/downloadWithURL:delegate:options:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)downloadWithURL:(NSURL *)url delegate:(id)delegate options:(SDWebImageOptions)options userInfo:(NSDictionary *)info success:(SDWebImageSuccessBlock)success failure:(SDWebImageFailureBlock)failure</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>url</Name>
+					<Abstract type="html">The URL to the image</Abstract>
+				</Parameter><Parameter>
+					<Name>delegate</Name>
+					<Abstract type="html">The delegate object used to send result back</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">A mask to specify options to use for this request</Abstract>
+				</Parameter><Parameter>
+					<Name>info</Name>
+					<Abstract type="html">An NSDictionnary passed back to delegate if provided</Abstract>
+				</Parameter><Parameter>
+					<Name>success</Name>
+					<Abstract type="html">A block called when image has been retrived successfuly</Abstract>
+				</Parameter><Parameter>
+					<Name>failure</Name>
+					<Abstract type="html">A block called when couldn&apos;t be retrived for some reason</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/downloadWithURL:delegate:options:userInfo:success:failure:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SDWebImageManager/cancelForDelegate:</TokenIdentifier>
+			<Abstract type="html">Cancel all pending download requests for a given delegate</Abstract>
+			<DeclaredIn>SDWebImageManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)cancelForDelegate:(id&lt;SDWebImageManagerDelegate&gt;)delegate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>delegate</Name>
+					<Abstract type="html">The delegate to cancel requests for</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/cancelForDelegate:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

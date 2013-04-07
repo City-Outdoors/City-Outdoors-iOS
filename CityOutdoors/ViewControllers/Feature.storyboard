@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="CC0-bu-krQ">
+    <dependencies>
+        <deployment version="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Feature Detail View Controller-->
+        <scene sceneID="Qem-tp-qxH">
+            <objects>
+                <viewController storyboardIdentifier="MCFeatureDetailViewController" id="CC0-bu-krQ" customClass="MCFeatureDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GwQ-UW-pfb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="hHc-vN-CAG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ImagePlaceholder.png" id="nRV-tQ-y6T">
+                                        <rect key="frame" x="2" y="0.0" width="316" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TVE-zX-JOD" userLabel="Photo Browser">
+                                        <rect key="frame" x="2" y="0.0" width="316" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showPhotoBrowser:" destination="CC0-bu-krQ" eventType="touchUpInside" id="Ty4-gC-gWo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="l3M-Jd-VW8">
+                                        <rect key="frame" x="20" y="245" width="130" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal" title="Show on Map">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showOnMap:" destination="CC0-bu-krQ" eventType="touchUpInside" id="Ahd-z1-awa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MIA-dC-XFY">
+                                        <rect key="frame" x="170" y="244" width="130" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal" title="Directions">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showDirections:" destination="CC0-bu-krQ" eventType="touchUpInside" id="njr-Qd-vW5"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="alm-5H-e8F">
+                                        <rect key="frame" x="20" y="285" width="280" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal" title="Related features">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showListOfChildFeatures:" destination="CC0-bu-krQ" eventType="touchUpInside" id="86Y-v3-Im0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6OA-6g-UmY">
+                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="o2J-lD-FYR"/>
+                                    <barButtonItem title="Favourite" id="9x4-HS-e1Y">
+                                        <connections>
+                                            <action selector="favouriteFeature:" destination="CC0-bu-krQ" id="uzC-mA-gec"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rl7-Dd-dNL"/>
+                                    <barButtonItem title="Comment" id="O3N-Xs-zmZ">
+                                        <connections>
+                                            <action selector="comment:" destination="CC0-bu-krQ" id="viN-ga-Uc7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CHr-pT-l4g"/>
+                                    <barButtonItem title="Report it" id="qr0-Nb-fNQ">
+                                        <connections>
+                                            <action selector="reportProblem:" destination="CC0-bu-krQ" id="0T6-2J-A91"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eVy-rZ-iRv"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="childFeaturesButton" destination="alm-5H-e8F" id="E89-Ve-VBc"/>
+                        <outlet property="containerScrollView" destination="hHc-vN-CAG" id="Sjg-gc-U8I"/>
+                        <outlet property="directionsButton" destination="MIA-dC-XFY" id="twy-bi-mk0"/>
+                        <outlet property="favouriteButton" destination="9x4-HS-e1Y" id="Tpn-hV-DhG"/>
+                        <outlet property="featureImageView" destination="nRV-tQ-y6T" id="7BS-Hl-C86"/>
+                        <outlet property="showOnMapButton" destination="l3M-Jd-VW8" id="clw-3M-Qmj"/>
+                        <outlet property="showPhotoBrowserButton" destination="TVE-zX-JOD" id="Z7G-19-Emc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HXs-Np-mCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="11"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ImagePlaceholder.png" width="320" height="240"/>
+    </resources>
+    <classes>
+        <class className="MCFeatureDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCFeatureDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="checkIn:"/>
+                <relationship kind="action" name="comment:"/>
+                <relationship kind="action" name="favouriteFeature:"/>
+                <relationship kind="action" name="reportProblem:"/>
+                <relationship kind="action" name="shareFeature:"/>
+                <relationship kind="action" name="showDirections:"/>
+                <relationship kind="action" name="showListOfChildFeatures:"/>
+                <relationship kind="action" name="showOnMap:"/>
+                <relationship kind="action" name="showPhotoBrowser:"/>
+                <relationship kind="outlet" name="childFeaturesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="containerScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="directionsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="favouriteButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="featureImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="showOnMapButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="showPhotoBrowserButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

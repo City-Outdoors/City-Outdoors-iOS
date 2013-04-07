@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/mariusciocanel/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.UIImage-Resize-0.1.docset
+Time: 2013-01-14 08:02:57 +0000

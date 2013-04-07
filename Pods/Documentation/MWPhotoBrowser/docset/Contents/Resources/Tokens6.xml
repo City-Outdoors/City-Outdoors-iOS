@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MWZoomingScrollView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MWZoomingScrollView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWZoomingScrollView.h</DeclaredIn>
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWZoomingScrollView/setCaptionView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWZoomingScrollView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) MWCaptionView *captionView</Declaration>
+			
+			
+			<Anchor>//api/name/captionView</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MWZoomingScrollView/captionView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWZoomingScrollView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) MWCaptionView *captionView</Declaration>
+			
+			
+			<Anchor>//api/name/captionView</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWZoomingScrollView/setPhoto:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWZoomingScrollView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) id&lt;MWPhoto&gt; photo</Declaration>
+			
+			
+			<Anchor>//api/name/photo</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MWZoomingScrollView/photo</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWZoomingScrollView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) id&lt;MWPhoto&gt; photo</Declaration>
+			
+			
+			<Anchor>//api/name/photo</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWZoomingScrollView/initWithPhotoBrowser:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWZoomingScrollView.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithPhotoBrowser:(MWPhotoBrowser *)browser</Declaration>
+			
+			
+			<Anchor>//api/name/initWithPhotoBrowser:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWZoomingScrollView/displayImage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWZoomingScrollView.h</DeclaredIn>			
+			
+			<Declaration>- (void)displayImage</Declaration>
+			
+			
+			<Anchor>//api/name/displayImage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWZoomingScrollView/displayImageFailure</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWZoomingScrollView.h</DeclaredIn>			
+			
+			<Declaration>- (void)displayImageFailure</Declaration>
+			
+			
+			<Anchor>//api/name/displayImageFailure</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWZoomingScrollView/setMaxMinZoomScalesForCurrentBounds</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWZoomingScrollView.h</DeclaredIn>			
+			
+			<Declaration>- (void)setMaxMinZoomScalesForCurrentBounds</Declaration>
+			
+			
+			<Anchor>//api/name/setMaxMinZoomScalesForCurrentBounds</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWZoomingScrollView/prepareForReuse</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWZoomingScrollView.h</DeclaredIn>			
+			
+			<Declaration>- (void)prepareForReuse</Declaration>
+			
+			
+			<Anchor>//api/name/prepareForReuse</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

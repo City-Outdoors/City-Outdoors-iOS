@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/MWPhotoBrowserDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/MWPhotoBrowserDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhotoBrowser.h</DeclaredIn>
+			
+			<NodeRef refid="8"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MWPhotoBrowserDelegate/numberOfPhotosInPhotoBrowser:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhotoBrowser.h</DeclaredIn>			
+			
+			<Declaration>- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfPhotosInPhotoBrowser:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MWPhotoBrowserDelegate/photoBrowser:photoAtIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhotoBrowser.h</DeclaredIn>			
+			
+			<Declaration>- (id&lt;MWPhoto&gt;)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/photoBrowser:photoAtIndex:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MWPhotoBrowserDelegate/photoBrowser:captionViewForPhotoAtIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWPhotoBrowser.h</DeclaredIn>			
+			
+			<Declaration>- (MWCaptionView *)photoBrowser:(MWPhotoBrowser *)photoBrowser captionViewForPhotoAtIndex:(NSUInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/photoBrowser:captionViewForPhotoAtIndex:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

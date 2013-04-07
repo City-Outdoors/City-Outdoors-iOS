@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIImage+ResizeCategory.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIImage(ResizeCategory)</TokenIdentifier>
+			<Abstract type="html">Copyright (c) 2010 Olivier Halligon</Abstract>
+			<DeclaredIn>UIImage+Resize.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIImage(ResizeCategory)/resizedImageToSize:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIImage+Resize.h</DeclaredIn>			
+			
+			<Declaration>- (UIImage *)resizedImageToSize:(CGSize)dstSize</Declaration>
+			
+			
+			<Anchor>//api/name/resizedImageToSize:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIImage(ResizeCategory)/resizedImageToFitInSize:scaleIfSmaller:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIImage+Resize.h</DeclaredIn>			
+			
+			<Declaration>- (UIImage *)resizedImageToFitInSize:(CGSize)boundingSize scaleIfSmaller:(BOOL)scale</Declaration>
+			
+			
+			<Anchor>//api/name/resizedImageToFitInSize:scaleIfSmaller:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

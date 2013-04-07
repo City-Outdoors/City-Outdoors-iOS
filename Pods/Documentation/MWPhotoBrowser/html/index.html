@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>MWPhotoBrowser 1.0.2 Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">MWPhotoBrowser 1.0.2 </a></h1>
+				<a id="developerHome" href="index.html">Michael Waterfall</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">MWPhotoBrowser 1.0.2 Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main">
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">MWPhotoBrowser 1.0.2 Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1><a href="Classes/MWPhotoBrowser.html">MWPhotoBrowser</a> — A simple iOS photo browser</h1>
+
+<p><a href="Classes/MWPhotoBrowser.html">MWPhotoBrowser</a> is an implementation of a photo browser similar to the native Photos app in iOS. It can display one or more images by providing either <code>UIImage</code> objects, file paths to images on the device, or URLs to images online. The photo browser handles the downloading and caching of photos from the web seamlessly. Photos can be zoomed and panned, and optional (customisable) captions can be displayed. Works on iOS 3.2+. All strings are localisable so they can be used in apps that support multiple languages.</p>
+
+<p><a href="[http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser1.png](http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser1.png)"><img src="[http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser1](http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser1)_thumb.png" alt="Alt" /></a>    <a href="[http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser2.png](http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser2.png)"><img src="[http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser2](http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser2)_thumb.png" alt="Alt" /></a>    <a href="[http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser3.png](http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser3.png)"><img src="[http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser3](http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser3)_thumb.png" alt="Alt" /></a>    <a href="[http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser4.png](http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser4.png)"><img src="[http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser4](http://dl.dropbox.com/u/2111839/Permanent/MWPhotoBrowser/mwphotobrowser4)_thumb.png" alt="Alt" /></a></p>
+
+<h2>Usage</h2>
+
+<p><a href="Classes/MWPhotoBrowser.html">MWPhotoBrowser</a> is designed to be presented within a navigation controller. Simply set the delegate (which must conform to <a href="Protocols/MWPhotoBrowserDelegate.html"><code>MWPhotoBrowserDelegate</code></a>) and implement the 2 required delegate methods to provide the photo browser with the data in the form of <a href="Classes/MWPhoto.html"><code>MWPhoto</code></a> objects. You can create an <a href="Classes/MWPhoto.html"><code>MWPhoto</code></a> object by providing a <code>UIImage</code> object, a file path to a physical image file, or a URL to an image online.</p>
+
+<p><a href="Classes/MWPhoto.html"><code>MWPhoto</code></a> objects handle caching, file management, downloading of web images, and various optimisations for you. If however you would like to use your own data model to represent photos you can simply ensure your model conforms to the <a href="Classes/MWPhoto.html"><code>MWPhoto</code></a> protocol. You can then handle the management of caching, downloads, etc, yourself. More information on this can be found in <code>MWPhotoProtocol.h</code>.</p>
+
+<p>See the code snippet below for an example of how to implement the photo browser. There is also a simple demo app within the project.</p>
+
+<pre><code>// Create array of `MWPhoto` objects
+self.photos = [NSMutableArray array];
+[photos addObject:[MWPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo2l" ofType:@"jpg"]]];
+[photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b.jpg"]]];
+[photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3590/3329114220_5fbc5bc92b.jpg"]]];
+
+// Create &amp; present browser
+MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+// Set options
+browser.wantsFullScreenLayout = YES; // Decide if you want the photo browser full screen, i.e. whether the status bar is affected (defaults to YES)
+browser.displayActionButton = YES; // Show action button to save, copy or email photos (defaults to NO)
+[browser setInitialPageIndex:1]; // Example: allows second image to be presented first
+// Present
+[self.navigationController pushViewController:browser animated:YES];
+</code></pre>
+
+<p>Then respond to the required delegate methods:</p>
+
+<pre><code>- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+    return self.photos.count;
+}
+
+- (MWPhoto *)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+    if (index &lt; self.photos.count)
+        return [self.photos objectAtIndex:index];
+    return nil;
+}
+</code></pre>
+
+<p>You can present the browser modally simply by wrapping it in a new navigation controller and presenting that. The demo app allows you to toggle between the two presentation types.</p>
+
+<p>If you don&rsquo;t want to view the photo browser full screen (for example if you are using view controller containment in iOS 5) then set the photo browser&rsquo;s <code>wantsFullScreenLayout</code> property to <code>NO</code>. This will mean the status bar will not be affected by the photo browser.</p>
+
+<h3>Photo Captions</h3>
+
+<p>Photo captions can be displayed simply by setting the <code>caption</code> property on specific photos:</p>
+
+<pre><code>MWPhoto *photo = [MWPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo2l" ofType:@"jpg"]];
+photo.caption = @"Campervan";
+</code></pre>
+
+<p>No caption will be displayed if the caption property is not set.</p>
+
+<h4>Custom Captions</h4>
+
+<p>By default, the caption is a simple black transparent view with a label displaying the photo&rsquo;s caption in white. If you want to implement your own caption view, follow these steps:</p>
+
+<ol>
+<li>Optionally use a subclass of <code>MWPhoto</code> for your photos so you can store more data than a simple caption string.</li>
+<li>Subclass <code>MWCaptionView</code> and override <code>-setupCaption</code> and <code>-sizeThatFits:</code> (and any other UIView methods you see fit) to layout your own view and set it&rsquo;s size. More information on this can be found in <code>MWCaptionView.h</code></li>
+<li>Implement the <code>-photoBrowser:captionViewForPhotoAtIndex:</code> <a href="Classes/MWPhotoBrowser.html">MWPhotoBrowser</a> delegate method (shown below).</li>
+</ol>
+
+
+<p>Example delegate method for custom caption view:</p>
+
+<pre><code>- (MWCaptionView *)photoBrowser:(MWPhotoBrowser *)photoBrowser captionViewForPhotoAtIndex:(NSUInteger)index {
+    MWPhoto *photo = [self.photos objectAtIndex:index];
+    MyMWCaptionViewSubclass *captionView = [[MyMWCaptionViewSubclass alloc] initWithPhoto:photo];
+    return [captionView autorelease];
+}
+</code></pre>
+
+<h2>Adding to your project (Xcode 4)</h2>
+
+<h3>Method 1: Static Library</h3>
+
+<ol>
+<li>Get the latest source from GitHub by either <a href="https://github.com/mwaterfall/MWPhotoBrowser/zipball/master">downloading as a zip file</a> or by cloning the repository at <code>git://github.com/mwaterfall/MWPhotoBrowser.git</code> and store the code wherever you wish.</li>
+<li>Right-click on the your project in the navigator, click &ldquo;Add Files to &lsquo;Your Project&rsquo;&rdquo;, and browse to and select &ldquo;<a href="Classes/MWPhotoBrowser.html">MWPhotoBrowser</a>.xcodeproj&rdquo;</li>
+<li>In your project&rsquo;s target settings, go to &ldquo;Build Phases&rdquo; &ndash;> &ldquo;Link Binary With Libraries&rdquo; and add <code>libMWPhotoBrowser.a</code>.</li>
+<li>Still in &ldquo;Build Phases&rdquo;, drop down &ldquo;Copy Bundle Resources&rdquo; and drag the file <code>MWPhotoBrowser.bundle</code> from the <a href="Classes/MWPhotoBrowser.html">MWPhotoBrowser</a> project into that list. This ensures your project will include the required graphics for the photo browser to work correctly.</li>
+<li>In the target, select the &ldquo;Build Settings&rdquo; tab and ensure &ldquo;Always Search User Paths&rdquo; is set to YES, and &ldquo;User Header Search Paths&rdquo; is set to the recursive absolute or relative path that points to a directory under which the <a href="Classes/MWPhotoBrowser.html">MWPhotoBrowser</a> code is stored. In the file layout of the <a href="Classes/MWPhotoBrowser.html">MWPhotoBrowser</a> project, a simple ../** works as the demo project folder and <a href="Classes/MWPhotoBrowser.html">MWPhotoBrowser</a> project folder are adjacent to one another. Please let me know if you encounter any issue with this.</li>
+<li>In &ldquo;Summary&rdquo; add <code>MessageUI.framework</code> and <code>ImageIO.framework</code> to &ldquo;Linked Frameworks and Libraries&rdquo;.</li>
+</ol>
+
+
+<p>You should now be able to include <code>MWPhotoBrowser.h</code> into your project and start using it.</p>
+
+<p>Setting these things up in Xcode 4 can be a bit tricky so if you run into any problems you may wish to read through a few bits of information:</p>
+
+<ul>
+<li><a href="http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/910-A-Developing_a_Static_Library_and_Incorporating_It_in_Your_Application/archiving_an_application_that_uses_a_static_library.html">Developing a Static Library and Incorporating It in Your Application</a></li>
+<li><a href="http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4/#using_a_static_library">Using Open Source Static Libraries in Xcode 4</a></li>
+<li><a href="https://docs.google.com/document/pub?id=14XR5zcZb2Kz2s6A4AbzB00NLkrW9bWxMMprVsUao-hY">How to embed static library into Xcode 4 project</a></li>
+</ul>
+
+
+<h3>Method 2: Including Source Directly Into Your Project</h3>
+
+<p>Another method is to simply add the files to your Xcode project, copying them to your project&rsquo;s directory if required. Ensure that all the code within <code>MWPhotoBrowser/Classes</code>, <code>MWPhotoBrowser/Libraries</code> and the <code>MWPhotoBrowser.bundle</code> is included in your project.</p>
+
+<p>If your project uses ARC then you will have to disable ARC for each of the files in MWPhotoBrowser. Here&rsquo;s how you do it: <a href="http://stackoverflow.com/a/6658549/106244">http://stackoverflow.com/a/6658549/106244</a></p>
+
+<h2>Outstanding issues and improvements</h2>
+
+<p><em>Nothing outstanding</em></p>
+
+<h2>Notes and Accreditation</h2>
+
+<p><a href="Classes/MWPhotoBrowser.html">MWPhotoBrowser</a> very gratefully makes use of 2 other fantastic open source projects:</p>
+
+<ul>
+<li><a href="https://github.com/rs/SDWebImage">SDWebImage</a> by Olivier Poitrey — Used to handle downloading and decompressing of photos from the web.</li>
+<li><a href="https://github.com/jdg/MBProgressHUD">MBProgressHUD</a> by Jonathan George — Used to display notifications of photo saving and copying progress/completion.</li>
+</ul>
+
+
+<p>Demo photos kindly provided by Oliver Waters (<a href="http://twitter.com/oliverwaters">http://twitter.com/oliverwaters</a>).</p>
+
+<h2>Licence</h2>
+
+<p>Copyright &copy; 2010 Michael Waterfall</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &ldquo;Software&rdquo;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED &ldquo;AS IS&rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+						
+						
+					</div>
+					
+                        
+                    
+					
+					
+					<div class="index-column">
+						<h2 class="index-title">Class References</h2>
+						<ul>
+							
+							<li><a href="Classes/MWCaptionView.html">MWCaptionView</a></li>
+							
+							<li><a href="Classes/MWPhoto.html">MWPhoto</a></li>
+							
+							<li><a href="Classes/MWPhotoBrowser.html">MWPhotoBrowser</a></li>
+							
+							<li><a href="Classes/MWTapDetectingImageView.html">MWTapDetectingImageView</a></li>
+							
+							<li><a href="Classes/MWTapDetectingView.html">MWTapDetectingView</a></li>
+							
+							<li><a href="Classes/MWZoomingScrollView.html">MWZoomingScrollView</a></li>
+							
+						</ul>
+					</div>
+					
+					
+						
+					<div class="index-column">
+						
+						<h2 class="index-title">Protocol References</h2>
+						<ul>
+							
+							<li><a href="Protocols/MWPhoto.html">MWPhoto</a></li>
+							
+							<li><a href="Protocols/MWPhotoBrowserDelegate.html">MWPhotoBrowserDelegate</a></li>
+							
+							<li><a href="Protocols/MWTapDetectingImageViewDelegate.html">MWTapDetectingImageViewDelegate</a></li>
+							
+							<li><a href="Protocols/MWTapDetectingViewDelegate.html">MWTapDetectingViewDelegate</a></li>
+							
+						</ul>
+						
+						
+					</div>
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Michael Waterfall. All rights reserved. (Last updated: 2012-12-07)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>

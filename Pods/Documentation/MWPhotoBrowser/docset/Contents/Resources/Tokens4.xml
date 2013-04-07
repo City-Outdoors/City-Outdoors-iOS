@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MWTapDetectingImageView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MWTapDetectingImageView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingImageView.h</DeclaredIn>
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWTapDetectingImageView/setTapDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingImageView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;MWTapDetectingImageViewDelegate&gt; tapDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/tapDelegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MWTapDetectingImageView/tapDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingImageView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;MWTapDetectingImageViewDelegate&gt; tapDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/tapDelegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWTapDetectingImageView/handleSingleTap:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingImageView.h</DeclaredIn>			
+			
+			<Declaration>- (void)handleSingleTap:(UITouch *)touch</Declaration>
+			
+			
+			<Anchor>//api/name/handleSingleTap:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWTapDetectingImageView/handleDoubleTap:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingImageView.h</DeclaredIn>			
+			
+			<Declaration>- (void)handleDoubleTap:(UITouch *)touch</Declaration>
+			
+			
+			<Anchor>//api/name/handleDoubleTap:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWTapDetectingImageView/handleTripleTap:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWTapDetectingImageView.h</DeclaredIn>			
+			
+			<Declaration>- (void)handleTripleTap:(UITouch *)touch</Declaration>
+			
+			
+			<Anchor>//api/name/handleTripleTap:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

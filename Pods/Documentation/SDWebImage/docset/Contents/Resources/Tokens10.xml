@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SDWebImageDecoderDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SDWebImageDecoderDelegate</TokenIdentifier>
+			<Abstract type="html">Delegate protocol for SDWebImageDecoder</Abstract>
+			<DeclaredIn>SDWebImageDecoder.h</DeclaredIn>
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SDWebImageDecoderDelegate/imageDecoder:didFinishDecodingImage:userInfo:</TokenIdentifier>
+			<Abstract type="html">Called when pre-decoding is completed</Abstract>
+			<DeclaredIn>SDWebImageDecoder.h</DeclaredIn>			
+			
+			<Declaration>- (void)imageDecoder:(SDWebImageDecoder *)decoder didFinishDecodingImage:(UIImage *)image userInfo:(NSDictionary *)userInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>decoder</Name>
+					<Abstract type="html">The image decoder instance</Abstract>
+				</Parameter><Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The pre-decoded image</Abstract>
+				</Parameter><Parameter>
+					<Name>userInfo</Name>
+					<Abstract type="html">the provided user info dictionary</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/imageDecoder:didFinishDecodingImage:userInfo:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

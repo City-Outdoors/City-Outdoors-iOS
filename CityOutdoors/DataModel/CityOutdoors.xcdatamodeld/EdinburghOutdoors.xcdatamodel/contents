@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="MCCollection" representedClassName="MCCollection" syncable="YES">
+        <attribute name="collectionDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="collectionID" attributeType="Integer 64" minValueString="0" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="iconHeight" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="iconURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="iconWidth" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="slug" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MCCollectionItem" inverseName="collection" inverseEntity="MCCollectionItem" syncable="YES"/>
+    </entity>
+    <entity name="MCCollectionItem" representedClassName="MCCollectionItem" syncable="YES">
+        <attribute name="collectionItemID" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="slug" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="collection" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MCCollection" inverseName="items" inverseEntity="MCCollection" syncable="YES"/>
+        <relationship name="feature" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MCFeature" syncable="YES"/>
+    </entity>
+    <entity name="MCContent" representedClassName="MCContent" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentID" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="hasPicture" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="pictureFullURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pictureNormalURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pictureThumbURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="feature" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MCFeature" inverseName="contents" inverseEntity="MCFeature" syncable="YES"/>
+    </entity>
+    <entity name="MCFeature" representedClassName="MCFeature" syncable="YES">
+        <attribute name="featureID" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="shareURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="childItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MCCollectionItem" syncable="YES"/>
+        <relationship name="contents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MCContent" inverseName="feature" inverseEntity="MCContent" syncable="YES"/>
+        <relationship name="featureItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MCFeatureItem" inverseName="feature" inverseEntity="MCFeatureItem" syncable="YES"/>
+        <relationship name="question" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MCQuestion" inverseName="feature" inverseEntity="MCQuestion" syncable="YES"/>
+    </entity>
+    <entity name="MCFeatureField" representedClassName="MCFeatureField" syncable="YES">
+        <attribute name="fieldID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="textValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="featureItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MCFeatureItem" inverseName="fields" inverseEntity="MCFeatureItem" syncable="YES"/>
+    </entity>
+    <entity name="MCFeatureItem" representedClassName="MCFeatureItem" syncable="YES">
+        <attribute name="collectionID" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="featureItemID" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="slug" attributeType="String" syncable="YES"/>
+        <relationship name="feature" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MCFeature" inverseName="featureItems" inverseEntity="MCFeature" syncable="YES"/>
+        <relationship name="fields" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MCFeatureField" inverseName="featureItem" inverseEntity="MCFeatureField" syncable="YES"/>
+    </entity>
+    <entity name="MCQuestion" representedClassName="MCQuestion" syncable="YES">
+        <attribute name="hasAnswered" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="question" attributeType="String" syncable="YES"/>
+        <attribute name="questionID" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" attributeType="String" syncable="YES"/>
+        <relationship name="feature" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MCFeature" inverseName="question" inverseEntity="MCFeature" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MCCollection" positionX="-2880" positionY="-4482" width="128" height="163"/>
+        <element name="MCCollectionItem" positionX="-3141" positionY="-4348" width="126" height="118"/>
+        <element name="MCContent" positionX="-2655" positionY="-4176" width="128" height="148"/>
+        <element name="MCFeature" positionX="-2925" positionY="-4153" width="128" height="178"/>
+        <element name="MCFeatureField" positionX="-2486" positionY="-4302" width="128" height="103"/>
+        <element name="MCFeatureItem" positionX="-2702" positionY="-4365" width="128" height="118"/>
+        <element name="MCQuestion" positionX="160" positionY="192" width="128" height="120"/>
+    </elements>
+</model>

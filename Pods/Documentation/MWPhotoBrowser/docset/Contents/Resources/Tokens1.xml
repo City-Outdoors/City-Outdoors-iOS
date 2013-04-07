@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MWCaptionView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MWCaptionView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWCaptionView.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWCaptionView/initWithPhoto:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWCaptionView.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithPhoto:(id&lt;MWPhoto&gt;)photo</Declaration>
+			
+			
+			<Anchor>//api/name/initWithPhoto:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWCaptionView/setupCaption</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWCaptionView.h</DeclaredIn>			
+			
+			<Declaration>- (void)setupCaption</Declaration>
+			
+			
+			<Anchor>//api/name/setupCaption</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MWCaptionView/sizeThatFits:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MWCaptionView.h</DeclaredIn>			
+			
+			<Declaration>- (CGSize)sizeThatFits:(CGSize)size</Declaration>
+			
+			
+			<Anchor>//api/name/sizeThatFits:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>
